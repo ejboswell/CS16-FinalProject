@@ -13,6 +13,7 @@ class StaffListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("View Loaded")
     }
     
     override func viewWillAppear(_ animated: Bool) {
