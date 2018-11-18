@@ -12,6 +12,11 @@
 		550403F0218FB4ED008AC0E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 550403EE218FB4ED008AC0E7 /* Main.storyboard */; };
 		550403F2218FB4EF008AC0E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 550403F1218FB4EF008AC0E7 /* Assets.xcassets */; };
 		550403F5218FB4EF008AC0E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 550403F3218FB4EF008AC0E7 /* LaunchScreen.storyboard */; };
+		550E4EC3219E10480054A19A /* ClientShiftDetailTableVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550E4EC2219E10480054A19A /* ClientShiftDetailTableVController.swift */; };
+		550E4EC5219F608F0054A19A /* ClientStaffMatchesTableVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550E4EC4219F608F0054A19A /* ClientStaffMatchesTableVController.swift */; };
+		550E4EC721A0E57A0054A19A /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550E4EC621A0E57A0054A19A /* Schedule.swift */; };
+		550E4EC921A0E58B0054A19A /* ScheduleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550E4EC821A0E58B0054A19A /* ScheduleList.swift */; };
+		551225532193876400CDE295 /* NewClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551225522193876400CDE295 /* NewClientViewController.swift */; };
 		55B0BDAD2190F6A000FC53F4 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0BDAC2190F6A000FC53F4 /* Client.swift */; };
 		55B0BDAF2190F6F600FC53F4 /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0BDAE2190F6F600FC53F4 /* Staff.swift */; };
 		55B0BDB12190F78600FC53F4 /* ClientList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0BDB02190F78600FC53F4 /* ClientList.swift */; };
@@ -29,6 +34,11 @@
 		550403F1218FB4EF008AC0E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		550403F4218FB4EF008AC0E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		550403F6218FB4EF008AC0E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		550E4EC2219E10480054A19A /* ClientShiftDetailTableVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientShiftDetailTableVController.swift; sourceTree = "<group>"; };
+		550E4EC4219F608F0054A19A /* ClientStaffMatchesTableVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientStaffMatchesTableVController.swift; sourceTree = "<group>"; };
+		550E4EC621A0E57A0054A19A /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		550E4EC821A0E58B0054A19A /* ScheduleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleList.swift; sourceTree = "<group>"; };
+		551225522193876400CDE295 /* NewClientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClientViewController.swift; sourceTree = "<group>"; };
 		55B0BDAC2190F6A000FC53F4 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		55B0BDAE2190F6F600FC53F4 /* Staff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
 		55B0BDB02190F78600FC53F4 /* ClientList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientList.swift; sourceTree = "<group>"; };
@@ -69,9 +79,14 @@
 			isa = PBXGroup;
 			children = (
 				550403EA218FB4ED008AC0E7 /* AppDelegate.swift */,
-				550403EC218FB4ED008AC0E7 /* StaffScheduleViewController.swift */,
 				550403EE218FB4ED008AC0E7 /* Main.storyboard */,
+				550E4EC2219E10480054A19A /* ClientShiftDetailTableVController.swift */,
+				551225522193876400CDE295 /* NewClientViewController.swift */,
 				55B0BDB42191001C00FC53F4 /* ClientListTableViewController.swift */,
+				550E4EC4219F608F0054A19A /* ClientStaffMatchesTableVController.swift */,
+				550E4EC621A0E57A0054A19A /* Schedule.swift */,
+				550E4EC821A0E58B0054A19A /* ScheduleList.swift */,
+				550403EC218FB4ED008AC0E7 /* StaffScheduleViewController.swift */,
 				55B0BDB821911F1D00FC53F4 /* StaffListTableViewController.swift */,
 				55B0BDAC2190F6A000FC53F4 /* Client.swift */,
 				55B0BDB02190F78600FC53F4 /* ClientList.swift */,
@@ -157,13 +172,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				550403ED218FB4ED008AC0E7 /* StaffScheduleViewController.swift in Sources */,
+				550E4EC5219F608F0054A19A /* ClientStaffMatchesTableVController.swift in Sources */,
 				55B0BDB921911F1D00FC53F4 /* StaffListTableViewController.swift in Sources */,
 				55B0BDB52191001C00FC53F4 /* ClientListTableViewController.swift in Sources */,
 				550403EB218FB4ED008AC0E7 /* AppDelegate.swift in Sources */,
+				551225532193876400CDE295 /* NewClientViewController.swift in Sources */,
 				55B0BDB32190F81C00FC53F4 /* StaffList.swift in Sources */,
+				550E4EC3219E10480054A19A /* ClientShiftDetailTableVController.swift in Sources */,
+				550E4EC921A0E58B0054A19A /* ScheduleList.swift in Sources */,
 				55B0BDAF2190F6F600FC53F4 /* Staff.swift in Sources */,
 				55B0BDB72191104900FC53F4 /* ModelClientStaffScheduler.swift in Sources */,
 				55B0BDAD2190F6A000FC53F4 /* Client.swift in Sources */,
+				550E4EC721A0E57A0054A19A /* Schedule.swift in Sources */,
 				55B0BDB12190F78600FC53F4 /* ClientList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

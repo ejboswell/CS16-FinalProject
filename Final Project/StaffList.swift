@@ -11,8 +11,12 @@ import Foundation
 class StaffList {
     var staffs: [Staff] = []
     
-    func addStaff(staffFirstName: String, staffLastName: String)  {
-        let c = Staff(staffFirstName: staffFirstName, staffLastName: staffLastName)
+// When called func addStaff  instantiates (makes) a new instance of Staff
+//    func addStaff(staffFirstName: String, staffLastName: String, staffShiftsAvailable: [String:String] = [:], staffShiftsBooked: [String:String] = [:])  {
+//        let c = Staff(staffFirstName: staffFirstName, staffLastName: staffLastName, staffShiftsAvailable: staffShiftsAvailable, staffShiftsBooked: staffShiftsBooked)
+        func addStaff(staffFirstName: String, staffLastName: String, staffShiftsAvailable: [String] = [], staffShiftsBooked: [String:Client] = [:])  {
+            let c = Staff(staffFirstName: staffFirstName, staffLastName: staffLastName, staffShiftsAvailable: staffShiftsAvailable, staffShiftsBooked: staffShiftsBooked)
+    
         staffs.append(c)
     }
     

@@ -8,7 +8,21 @@
 
 import Foundation
 
-struct Client {
+//struct Client {
+//    var clientFirstName: String = ""
+//    var clientLastName:  String = ""
+//    var hasCaregiver: [String:Staff?] = [:]
+//}
+
+class Client {
     var clientFirstName: String = ""
     var clientLastName:  String = ""
+    var hasCaregiver: [String:Staff?] = [:]
+    
+    
+    init(clientFirstName:String, clientLastName:String, hasCaregiver: [String:Staff?]) {
+        self.clientFirstName = clientFirstName
+        self.clientLastName = clientLastName
+        self.hasCaregiver = hasCaregiver
+    }
 }

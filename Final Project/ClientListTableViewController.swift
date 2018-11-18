@@ -30,7 +30,7 @@ class ClientListTableViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        print("table is asking how many sections")
+        
         return 2
     }
     
@@ -38,9 +38,9 @@ class ClientListTableViewController: UITableViewController {
         if section == 0 {
             return 1
         } else {
-            return 2
+            return ModelClientStaffScheduler.sharedInstance.masterClientList.numberOfClients
             
-            //return ClientList.shareInstance.numberOfClients()
+          
             
         }
     }
@@ -52,12 +52,24 @@ class ClientListTableViewController: UITableViewController {
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: cellStyle, for: indexPath)
         if indexPath.section == 0 {
-            cell.textLabel?.text = "summary"
+            
+            cell.textLabel?.text = "We have " +
+                "\(ModelClientStaffScheduler.sharedInstance.masterClientList.numberOfClients)" + " Clients"
         } else {
             let client = ModelClientStaffScheduler.sharedInstance.masterClientList.getClient(number: indexPath.row)
             cell.textLabel?.text = client.clientFirstName
             cell.detailTextLabel?.text = client.clientLastName
         }
         return cell
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "toClientShiftDetail", sender: nil)
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let rowNumber = tableView.indexPathForSelectedRow!.row
+        let nextController = segue.destination as! ClientShiftDetailTableVController
+        nextController.currentClient = ModelClientStaffScheduler.sharedInstance.masterClientList.getClient(number: rowNumber)
     }
 }
