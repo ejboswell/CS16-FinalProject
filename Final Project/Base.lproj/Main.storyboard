@@ -226,14 +226,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydC-DJ-APd">
-                                <rect key="frame" x="130" y="512" width="137" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Enter New Client"/>
-                                <connections>
-                                    <action selector="doneButtonTapped:" destination="mCK-1M-VnM" eventType="touchUpInside" id="BNS-ec-Rfp"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvy-I0-FEO">
                                 <rect key="frame" x="71" y="563" width="252" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -246,9 +238,9 @@
                         <viewLayoutGuide key="safeArea" id="HEc-El-MJU"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add a Client VC" id="m1j-uX-I5K">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="TJc-H4-j7a">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="TJc-H4-j7a">
                             <connections>
-                                <action selector="doneEnteringNewClientTapped:" destination="mCK-1M-VnM" id="Ub0-P1-eWG"/>
+                                <action selector="addButtonTapped:" destination="mCK-1M-VnM" id="wBT-YR-ho3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -486,6 +478,7 @@
                                 <state key="normal" title="Add Staff and Shifts Selected"/>
                                 <connections>
                                     <action selector="addStaffAndShiftsTapped:" destination="W7I-p2-J3z" eventType="touchUpInside" id="RQ9-Hy-VL5"/>
+                                    <segue destination="SY6-uT-SOM" kind="show" identifier="segueToStaffListTVController" id="o97-mN-boR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -509,7 +502,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DLM-U0-8oy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2036" y="-76"/>
+            <point key="canvasLocation" x="2492" y="-618"/>
         </scene>
         <!--Client-->
         <scene sceneID="2Jx-hH-Sho">
@@ -570,6 +563,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="S9N-Hf-9og"/>
+        <segue reference="4Ko-6T-jjJ"/>
+        <segue reference="10c-qf-EWJ"/>
     </inferredMetricsTieBreakers>
 </document>

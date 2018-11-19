@@ -52,34 +52,20 @@ class ClientShiftDetailTableVController: UITableViewController {
 //        print("in cell for row at indexpath")
 //        print(shifts[indexPath.row])
         let cell = tableView.dequeueReusableCell(withIdentifier: "rightDetailCell", for: indexPath)
+// C will be an array of Schedule
         let c = ModelClientStaffScheduler.sharedInstance.masterScheduleList.clientStaffDetailInfo(theClient: currentClient)
         cell.backgroundColor = UIColor.white
         cell.textLabel?.text = c.schedules[indexPath.row].ashift
         print(currentShift)
+// If Staff object in the array is not empty put in the staff name and make background color yellow
         if c.schedules[indexPath.row].astaff != nil {
-//            print("HELLLLLLLLOOOOOOOOOOOOOO this is the currentshift then currentClient")
-//            print(currentShift)
-//            print(currentClient)
-//            print(currentClient.hasCaregiver[currentShift])
-//            cell.detailTextLabel?.text = currentClientFromMatches.hasCaregiver[currentShift]
-//            cell.detailTextLabel?.text = currentClient.hasCaregiver[shifts[indexPath.row]]??.staffFirstName
             cell.detailTextLabel?.text = c.schedules[indexPath.row].astaff?.staffFirstName
-//                currentClient.clientFirstName
             cell.backgroundColor = UIColor.yellow
+// Otherwise put "open" and make backgroundcolor white
         } else {
             cell.detailTextLabel?.text = "open"
             cell.backgroundColor = UIColor.white
         }
-//        if currentStaffBooked != nil {
-//            if shifts[indexPath.row] == currentShift {
-//                cell.detailTextLabel?.text = currentClient.hasCaregiver[shifts[indexPath.row]]?.staffFirstName
-////            cell.detailTextLabel?.text = currentStaffBooked.staffFirstName
-            
-//        } else {
-//            cell.detailTextLabel?.text = "open"
-//        }
-        // Configure the cell...
-
         return cell
     }
     

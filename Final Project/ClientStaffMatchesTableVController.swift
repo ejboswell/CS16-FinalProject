@@ -36,15 +36,13 @@ class ClientStaffMatchesTableVController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        print("THE COUNT of POSSIBLE STAFF Is:")
-//        print(currentPossibleStaff.count)
-
-        
+       
         let c = ModelClientStaffScheduler.sharedInstance.masterScheduleList.findAllStaffs(shift: currentShift)
+        print("THE COUNT of POSSIBLE STAFF Is:")
+        print(c.count)
         return c.count
         
-//       return currentPossibleStaff.count
+
         
     }
 
@@ -57,18 +55,10 @@ class ClientStaffMatchesTableVController: UITableViewController {
 
         
         if ModelClientStaffScheduler.sharedInstance.masterScheduleList.findAllStaffs(shift: currentShift)[indexPath.row].aclient != nil {
-             let clientName = ModelClientStaffScheduler.sharedInstance.masterScheduleList.findAllStaffs(shift: currentShift)[indexPath.row].aclient?.clientFirstName
-            print(clientName)
+
             cell.detailTextLabel?.text = ModelClientStaffScheduler.sharedInstance.masterScheduleList.findAllStaffs(shift: currentShift)[indexPath.row].aclient?.clientFirstName
             cell.backgroundColor = UIColor.red
-        
-        
-//        cell.textLabel!.text! = currentPossibleStaff[indexPath.row].staffFirstName
-//        if currentPossibleStaff[indexPath.row].staffShiftsBooked[currentShift] != nil {
-//            let x = currentPossibleStaff[indexPath.row].staffShiftsBooked[currentShift]
-//            cell.detailTextLabel?.text = x??.clientFirstName
-        
-//            cell.backgroundColor = UIColor.yellow
+
         } else {
             cell.detailTextLabel?.text = "open"
             cell.backgroundColor = UIColor.white
@@ -78,59 +68,35 @@ class ClientStaffMatchesTableVController: UITableViewController {
      
      
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        let staffInRow = ModelClientStaffScheduler.sharedInstance.masterScheduleList.findAllStaffs(shift: currentShift)[indexPath.row].astaff
-        ModelClientStaffScheduler.sharedInstance.masterScheduleList.makeAMatch(aclient: currentClientInMatches, astaff: staffInRow!, shift: currentShift)
         
-
-//        currentPossibleStaff[indexPath.row].staffShiftsBooked[currentShift] = currentClientInMatches
-//
-//        currentClientInMatches.hasCaregiver[currentShift] = currentPossibleStaff[indexPath.row]
-//        for item in currentClientInMatches.hasCaregiver {
-//            print("HAS CAREGIVER DICT:")
-//            print(item)
-//        }
-//        for item in currentPossibleStaff[indexPath.row].staffShiftsBooked {
-//            print("WHAT IS IN STAFFSHIFTSBOOKED")
-//            print(item)
-//        }
+        let staffInRow = ModelClientStaffScheduler.sharedInstance.masterScheduleList.findAllStaffs(shift: currentShift)[indexPath.row].astaff
+         if ModelClientStaffScheduler.sharedInstance.masterScheduleList.findAllStaffs(shift: currentShift)[indexPath.row].aclient == nil {
+            ModelClientStaffScheduler.sharedInstance.masterScheduleList.makeAMatch(aclient: currentClientInMatches, astaff: staffInRow!, shift: currentShift)
+        }
         performSegue(withIdentifier: "backToClientShiftDetail", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let rowNumber = tableView.indexPathForSelectedRow!.row
+        print("THIS IS THE ROWNUMBER")
+        print(rowNumber)
         let nextController = segue.destination as! ClientShiftDetailTableVController
-//        nextController.currentStaffBooked = currentPossibleStaff[tableView.indexPathForSelectedRow!.row]
-        print("I'm in the prepare for segue and I'm sending the currentStaffBooked")
-        let i =  ModelClientStaffScheduler.sharedInstance.masterScheduleList.findAllStaffs(shift: currentShift)[tableView.indexPathForSelectedRow!.row].astaff
-        print(i)
+
+//                    print("I'm in the prepare for segue and I'm sending the findAllStaffs(currentshift,astaff,firstname)")
+//                    let i =  ModelClientStaffScheduler.sharedInstance.masterScheduleList.findAllStaffs(shift: currentShift)[tableView.indexPathForSelectedRow!.row].astaff?.staffFirstName
+//                    print(i)
         
-        nextController.currentStaffBooked = ModelClientStaffScheduler.sharedInstance.masterScheduleList.findAllStaffs(shift: currentShift)[tableView.indexPathForSelectedRow!.row].astaff
+//        nextController.currentStaffBooked = ModelClientStaffScheduler.sharedInstance.masterScheduleList.findAllStaffs(shift: currentShift)[tableView.indexPathForSelectedRow!.row].astaff
         
-        print("I'm in the prepare for segue and I'm sending the currentclient")
-        print(currentClientInMatches)
+        
+                    print("I'm in the prepare for segue and I'm sending the currentclient")
+                    print(currentClientInMatches.clientFirstName)
         
         nextController.currentClient = currentClientInMatches
-        
         nextController.currentShift = currentShift
     }
   
-//
-//    func findStaff(shift:String) -> [Staff] {
-//        for object in ModelClientStaffScheduler.sharedInstance.masterStaffList.staffs {
-////            print("This is going to be a object " + "\(object)")
-//            if object.staffShiftsAvailable.contains(shift) {
-//                currentPossibleStaff.append(object)
-//
-//            }
-////            for item in currentPossibleStaff {
-////                print("HERE ARE THE MATCHES")
-////                print(item)
-////            }
-//
-//        }
-//        return currentPossibleStaff
-//    }
+
 
     
     

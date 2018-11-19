@@ -129,5 +129,15 @@ class ScheduleList {
         }
         return result
     }
-        
+    
+//    func clientStaffDetailInfo(theClient: Client) -> [Schedule] {
+//        let result: [Schedule] = []
+//        for item in ModelClientStaffScheduler.sharedInstance.masterScheduleList.schedules {
+//            if item.aclient === theClient {
+//                schedules.append(item)
+//            }
+//        }
+//        return result
+//    }
+    
 }

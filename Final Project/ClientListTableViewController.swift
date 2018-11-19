@@ -65,12 +65,22 @@ class ClientListTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        performSegue(withIdentifier: "toClientShiftDetail", sender: nil)
-        
+//        performSegue(withIdentifier: "toClientShiftDetail", sender: nil)
+         performSegue(withIdentifier: "toClientShiftDetail", sender: self)
     }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let rowNumber = tableView.indexPathForSelectedRow!.row
+//        let nextController = segue.destination as! ClientShiftDetailTableVController
+//        nextController.currentClient = ModelClientStaffScheduler.sharedInstance.masterClientList.getClient(number: rowNumber)
+//    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toClientShiftDetail" {
         let rowNumber = tableView.indexPathForSelectedRow!.row
         let nextController = segue.destination as! ClientShiftDetailTableVController
         nextController.currentClient = ModelClientStaffScheduler.sharedInstance.masterClientList.getClient(number: rowNumber)
-    }
+        }
+        }
+
+
 }
