@@ -51,6 +51,7 @@ class ClientListTableViewController: UITableViewController {
             cellStyle = "rightDetailCell"
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: cellStyle, for: indexPath)
+        cell.backgroundColor = UIColor.white
         if indexPath.section == 0 {
             
             cell.textLabel?.text = "We have " +

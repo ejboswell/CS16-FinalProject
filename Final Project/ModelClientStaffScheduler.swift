@@ -14,10 +14,21 @@ class ModelClientStaffScheduler {
     
     var masterClientList = ClientList()
     var masterStaffList = StaffList()
+    var masterScheduleList = ScheduleList()
 
     init() {
-        masterClientList.addClient(clientFirstName: "Michelle", clientLastName: "Smith", hasCaregiver:["SunA" : nil, "SunB" : nil,"SunC" : nil, "MonA" : nil, "MonB" : nil, "MonC" : nil, "TuesA" : nil, "TuesB" : nil, "TuesC" : nil, "WedA" : nil,  "WedB" : nil, "WedC" : nil, "ThursA" : nil, "ThursB" : nil, "ThursC" : nil, "FriA" : nil, "FriB" : nil, "FriC" : nil, "SatA" : nil, "SatB" : nil, "SatC" : nil])
-            masterClientList.addClient(clientFirstName: "Ellie", clientLastName: "Black", hasCaregiver: ["SunA" : nil, "SunB" : nil, "SunC" : nil ,"MonA" : nil, "MonB" : nil, "MonC" : nil, "TuesA" : nil, "TuesB" : nil, "TuesC" : nil, "WedA" : nil,  "WedB" : nil, "WedC" : nil, "ThursA" : nil, "ThursB" : nil, "ThursC" : nil, "FriA" : nil, "FriB" : nil, "FriC" : nil, "SatA" : nil, "SatB" : nil, "SatC" : nil])
+        let c = masterClientList.addClient(clientFirstName: "Michelle", clientLastName: "Smith", hasCaregiver:["SunA" : nil, "SunB" : nil,"SunC" : nil, "MonA" : nil, "MonB" : nil, "MonC" : nil, "TuesA" : nil, "TuesB" : nil, "TuesC" : nil, "WedA" : nil,  "WedB" : nil, "WedC" : nil, "ThursA" : nil, "ThursB" : nil, "ThursC" : nil, "FriA" : nil, "FriB" : nil, "FriC" : nil, "SatA" : nil, "SatB" : nil, "SatC" : nil])
+        
+        masterScheduleList.addANewClientSchedule(aclient: c)
+        
+        let c2 = masterClientList.addClient(clientFirstName: "Ellie", clientLastName: "Black", hasCaregiver: ["SunA" : nil, "SunB" : nil, "SunC" : nil ,"MonA" : nil, "MonB" : nil, "MonC" : nil, "TuesA" : nil, "TuesB" : nil, "TuesC" : nil, "WedA" : nil,  "WedB" : nil, "WedC" : nil, "ThursA" : nil, "ThursB" : nil, "ThursC" : nil, "FriA" : nil, "FriB" : nil, "FriC" : nil, "SatA" : nil, "SatB" : nil, "SatC" : nil])
+        
+        masterScheduleList.addANewClientSchedule(aclient: c2)
+        
+        
+
+        
+        
 //        masterStaffList.addStaff(staffFirstName: "Hailey", staffLastName: "Ross")
 //        masterStaffList.addStaff(staffFirstName: "Rose", staffLastName: "Panna")
 //        masterStaffList.addStaff(staffFirstName: "Alivia", staffLastName: "Cohen")
@@ -33,13 +44,29 @@ class ModelClientStaffScheduler {
 //        masterStaffList.addStaff(staffFirstName: "Jayne", staffLastName: "Larson", staffShiftsAvailable: ["WedA" : "available", "ThursA" : "available", "FriA" : "available", "FriB" : "available", "SatA" : "available"], staffShiftsBooked: [:])
 //        masterStaffList.addStaff(staffFirstName: "Krista", staffLastName: "Icban", staffShiftsAvailable: ["SunA" : "available", "SunB" : "available", "MonA" : "available", "MonB" : "available", "TuesA" : "available", "TuesB" : "available"], staffShiftsBooked: [:])
         
-                masterStaffList.addStaff(staffFirstName: "Hailey", staffLastName: "Ross", staffShiftsAvailable: ["MonC", "TuesC", "WedB", "ThursB", "FriC"], staffShiftsBooked: [:])
-                masterStaffList.addStaff(staffFirstName: "Alivia", staffLastName: "Cohen", staffShiftsAvailable: ["WedA", "ThursA", "FriA", "FriB", "SatA"], staffShiftsBooked: [:])
-                masterStaffList.addStaff(staffFirstName: "Rubie", staffLastName: "Haste", staffShiftsAvailable: ["SunA", "SunB", "MonA", "MonB", "TuesA", "TuesB"], staffShiftsBooked: [:])
-                masterStaffList.addStaff(staffFirstName: "Lilly", staffLastName: "Ryman", staffShiftsAvailable: ["WedC", "ThursC", "SatC"], staffShiftsBooked: [:])
-                masterStaffList.addStaff(staffFirstName: "Rose", staffLastName: "Panna", staffShiftsAvailable: ["MonC", "TuesC", "WedB", "ThursB", "FriC"], staffShiftsBooked: [:])
-                masterStaffList.addStaff(staffFirstName: "Jayne", staffLastName: "Larson", staffShiftsAvailable: ["WedA", "ThursA", "FriA", "FriB", "SatA"], staffShiftsBooked: [:])
-                masterStaffList.addStaff(staffFirstName: "Krista", staffLastName: "Icban", staffShiftsAvailable: ["SunA", "SunB", "MonA", "MonB", "TuesA", "TuesB"], staffShiftsBooked: [:])
+        let s1 = masterStaffList.addStaff(staffFirstName: "Hailey", staffLastName: "Ross", staffShiftsAvailable: ["MonC", "TuesC", "WedB", "ThursB", "FriC"], staffShiftsBooked: [:])
+        let s2 = masterStaffList.addStaff(staffFirstName: "Alivia", staffLastName: "Cohen", staffShiftsAvailable: ["WedA", "ThursA", "FriA", "FriB", "SatA"], staffShiftsBooked: [:])
+        let s3 = masterStaffList.addStaff(staffFirstName: "Rubie", staffLastName: "Haste", staffShiftsAvailable: ["SunA", "SunB", "MonA", "MonB", "TuesA", "TuesB"], staffShiftsBooked: [:])
+        let s4 = masterStaffList.addStaff(staffFirstName: "Lilly", staffLastName: "Ryman", staffShiftsAvailable: ["WedC", "ThursC", "SatC"], staffShiftsBooked: [:])
+        let s5 = masterStaffList.addStaff(staffFirstName: "Rose", staffLastName: "Panna", staffShiftsAvailable: ["MonC", "TuesC", "WedB", "ThursB", "FriC"], staffShiftsBooked: [:])
+        let s6 = masterStaffList.addStaff(staffFirstName: "Jayne", staffLastName: "Larson", staffShiftsAvailable: ["WedA", "ThursA", "FriA", "FriB", "SatA"], staffShiftsBooked: [:])
+        let s7 = masterStaffList.addStaff(staffFirstName: "Krista", staffLastName: "Icban", staffShiftsAvailable: ["SunA", "SunB", "MonA", "MonB", "TuesA", "TuesB"], staffShiftsBooked: [:])
+        
+        let s1s = s1.staffShiftsAvailable
+        masterScheduleList.addANewStaffSchedule(astaff: s1, shifts: s1s)
+        let s2s = s2.staffShiftsAvailable
+        masterScheduleList.addANewStaffSchedule(astaff: s2, shifts: s2s)
+        let s3s = s3.staffShiftsAvailable
+        masterScheduleList.addANewStaffSchedule(astaff: s3, shifts: s3s)
+        let s4s = s4.staffShiftsAvailable
+        masterScheduleList.addANewStaffSchedule(astaff: s4, shifts: s4s)
+        let s5s = s5.staffShiftsAvailable
+        masterScheduleList.addANewStaffSchedule(astaff: s5, shifts: s5s)
+        let s6s = s6.staffShiftsAvailable
+        masterScheduleList.addANewStaffSchedule(astaff: s6, shifts: s6s)
+        let s7s = s7.staffShiftsAvailable
+        masterScheduleList.addANewStaffSchedule(astaff: s7, shifts: s7s)
+        
     }
    
 }

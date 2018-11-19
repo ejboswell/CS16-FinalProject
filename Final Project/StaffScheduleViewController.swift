@@ -50,7 +50,11 @@ class StaffScheduleViewController: UIViewController {
 //            let satSCIndex = saturdaySControl.selectedSegmentIndex
             makeDayShiftAvailability()
             print(dayShiftAvailability)
-            ModelClientStaffScheduler.sharedInstance.masterStaffList.addStaff(staffFirstName: fNameTextField.text!, staffLastName: lNameTextField.text!, staffShiftsAvailable: dayShiftAvailability, staffShiftsBooked: [:])
+        let s = ModelClientStaffScheduler.sharedInstance.masterStaffList.addStaff(staffFirstName: fNameTextField.text!, staffLastName: lNameTextField.text!, staffShiftsAvailable: dayShiftAvailability, staffShiftsBooked: [:])
+            
+            let sShifts = s.staffShiftsAvailable
+            ModelClientStaffScheduler.sharedInstance.masterScheduleList.addANewStaffSchedule(astaff: s, shifts: sShifts)
+            
         }
     }
     

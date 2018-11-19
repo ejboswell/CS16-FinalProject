@@ -17,11 +17,12 @@ class ClientList {
     
    
     // When called func addClient instantiates (makes) a new instance of Client
-    func addClient(clientFirstName: String, clientLastName: String, hasCaregiver: [String:Staff?])  {
+    func addClient(clientFirstName: String, clientLastName: String, hasCaregiver: [String:Staff?]) -> Client  {
         let c = Client(clientFirstName: clientFirstName, clientLastName: clientLastName, hasCaregiver: [:])
 //            hasCaregiver)
         clients.append(c)
-        print(clients)
+//        print(clients)
+        return c
     }
     //  When called func getClient returns a single instance of Client from the array clients.
     func getClient(number:Int) -> Client {

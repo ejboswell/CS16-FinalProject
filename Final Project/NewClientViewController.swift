@@ -29,8 +29,9 @@ class NewClientViewController: UIViewController {
     @IBAction func doneButtonTapped(_ sender: UIButton) {
         
         if firstNameTextField.text != "" && lastNameTextField.text != "" {
-            ModelClientStaffScheduler.sharedInstance.masterClientList.addClient(clientFirstName: firstNameTextField.text!, clientLastName: lastNameTextField.text!, hasCaregiver: ["SunA" : nil, "SunB" : nil,"SunC" : nil, "MonA" : nil, "MonB" : nil, "MonC" : nil, "TuesA" : nil, "TuesB" : nil, "TuesC" : nil, "WedA" : nil,  "WedB" : nil, "WedC" : nil, "ThursA" : nil, "ThursB" : nil, "ThursC" : nil, "FriA" : nil, "FriB" : nil, "FriC" : nil, "SatA" : nil, "SatB" : nil, "SatC" : nil])
-         
+            let c = ModelClientStaffScheduler.sharedInstance.masterClientList.addClient(clientFirstName: firstNameTextField.text!, clientLastName: lastNameTextField.text!, hasCaregiver: ["SunA" : nil, "SunB" : nil,"SunC" : nil, "MonA" : nil, "MonB" : nil, "MonC" : nil, "TuesA" : nil, "TuesB" : nil, "TuesC" : nil, "WedA" : nil,  "WedB" : nil, "WedC" : nil, "ThursA" : nil, "ThursB" : nil, "ThursC" : nil, "FriA" : nil, "FriB" : nil, "FriC" : nil, "SatA" : nil, "SatB" : nil, "SatC" : nil])
+            ModelClientStaffScheduler.sharedInstance.masterScheduleList.addANewClientSchedule(aclient: c)
+
             
         } else {
             messageLabel.text = "Enter all information"
@@ -41,7 +42,7 @@ class NewClientViewController: UIViewController {
        
         if firstNameTextField.text != "" && lastNameTextField.text != "" {
             ModelClientStaffScheduler.sharedInstance.masterClientList.addClient(clientFirstName: firstNameTextField.text!, clientLastName: lastNameTextField.text!, hasCaregiver: [:])
-//                ["SunA" : nil, "SunB" : nil])
+
         
             
         } else {
