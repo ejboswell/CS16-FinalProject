@@ -52,6 +52,9 @@ class StaffScheduleViewController: UIViewController {
     
 
     
+    
+    
+    
         var dayShiftAvailability: [String] = []
     
         func makeDayShiftAvailability() {

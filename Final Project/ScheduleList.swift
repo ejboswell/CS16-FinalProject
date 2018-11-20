@@ -96,8 +96,21 @@ class ScheduleList {
         return availableStaffs
     }
     
+// This function sends true if the Client is already booked for the particular shift
+    func isClientBooked(aclient:Client, astaff:Staff, shift:String) -> Bool {
+        let thisShiftSchedule: [Schedule] = findAllStaffs(shift: shift)
+        for object in thisShiftSchedule {
+            if object.aclient === aclient && object.astaff != nil {
+                return true
+            }
+        }
+        return false
+    }
+    
+    
 // This function finds a staff for a client for a particular shift. Then it adds a staff to the object that has only a Client and the specified shift. (So now that object has no nil values) and then it removes the object that had only the Staff and the specified shift. (So now the staff no longer has availability during the specified shift)
     func makeAMatch(aclient: Client, astaff: Staff, shift: String) {
+//        if isClientBooked(aclient: aclient, astaff: astaff, shift: shift) == false {
         for bigobject in schedules {
             if bigobject.aclient?.clientFirstName == aclient.clientFirstName
                 && bigobject.aclient?.clientLastName == aclient.clientLastName
@@ -117,6 +130,7 @@ class ScheduleList {
                     print(" YOU DISPOSED OF the extra object that had only STAFF and shift (Client was nil)")
                 }
             }
+//        }
         }
     }
 

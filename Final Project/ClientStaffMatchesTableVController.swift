@@ -16,6 +16,7 @@ class ClientStaffMatchesTableVController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = currentShift
         
 //        findStaff(shift: currentShift)
         print("YYYYYYYYYYYYYY this is currentClientinMatches from func viewdidload")
@@ -70,7 +71,10 @@ class ClientStaffMatchesTableVController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let staffInRow = ModelClientStaffScheduler.sharedInstance.masterScheduleList.findAllStaffs(shift: currentShift)[indexPath.row].astaff
-         if ModelClientStaffScheduler.sharedInstance.masterScheduleList.findAllStaffs(shift: currentShift)[indexPath.row].aclient == nil {
+        let booked = ModelClientStaffScheduler.sharedInstance.masterScheduleList.isClientBooked(aclient: currentClientInMatches, astaff: staffInRow!, shift: currentShift)
+        let noClient = ModelClientStaffScheduler.sharedInstance.masterScheduleList.findAllStaffs(shift: currentShift)[indexPath.row].aclient
+        if noClient == nil && booked == false {
+//        if ModelClientStaffScheduler.sharedInstance.masterScheduleList.findAllStaffs(shift: currentShift)[indexPath.row].aclient == nil  {
             ModelClientStaffScheduler.sharedInstance.masterScheduleList.makeAMatch(aclient: currentClientInMatches, astaff: staffInRow!, shift: currentShift)
         }
         performSegue(withIdentifier: "backToClientShiftDetail", sender: nil)

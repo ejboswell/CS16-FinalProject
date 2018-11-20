@@ -22,7 +22,7 @@ class ClientShiftDetailTableVController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = currentClient.clientFirstName
+        self.navigationItem.title = ("\(currentClient.clientFirstName)" + " Shifts")
 //        tableView.reloadData()
 //        findStaff(shift: "SunA")
         
