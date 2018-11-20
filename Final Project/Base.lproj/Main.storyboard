@@ -486,7 +486,11 @@
                         <viewLayoutGuide key="safeArea" id="o3G-YK-Jh4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add A StaffVC" id="beE-pP-Ju9">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="aU8-DF-JwT"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aU8-DF-JwT">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="W7I-p2-J3z" id="hQm-ZM-pW8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="fNameTextField" destination="Nrq-fT-6nn" id="MXN-MV-LoP"/>
@@ -563,7 +567,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="o97-mN-boR"/>
+        <segue reference="4Ko-6T-jjJ"/>
         <segue reference="10c-qf-EWJ"/>
     </inferredMetricsTieBreakers>
 </document>
