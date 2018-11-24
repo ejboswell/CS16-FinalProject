@@ -22,7 +22,8 @@ class ClientShiftDetailTableVController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = ("\(currentClient.clientFirstName)" + " Shifts")
+        tableView.reloadData()
+       self.navigationItem.title = ("\(currentClient.clientFirstName)" + " Shifts")
 //        tableView.reloadData()
 //        findStaff(shift: "SunA")
         
@@ -36,6 +37,10 @@ class ClientShiftDetailTableVController: UITableViewController {
     }
 
     // MARK: - Table view data source
+    
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections

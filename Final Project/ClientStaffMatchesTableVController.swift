@@ -28,6 +28,10 @@ class ClientStaffMatchesTableVController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 
@@ -73,33 +77,51 @@ class ClientStaffMatchesTableVController: UITableViewController {
         let staffInRow = ModelClientStaffScheduler.sharedInstance.masterScheduleList.findAllStaffs(shift: currentShift)[indexPath.row].astaff
         let booked = ModelClientStaffScheduler.sharedInstance.masterScheduleList.isClientBooked(aclient: currentClientInMatches, astaff: staffInRow!, shift: currentShift)
         let noClient = ModelClientStaffScheduler.sharedInstance.masterScheduleList.findAllStaffs(shift: currentShift)[indexPath.row].aclient
+//        if booked == false {
+//            print("REDDDDDD")
+//            let alert = UIAlertController(title: "This Staff is already booked", message: "Try again", preferredStyle: .alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: .destructive, handler: { (action) in
+//                self.navigationController?.popViewController(animated: true)
+//            }))
+        
+        
         if noClient == nil && booked == false {
 //        if ModelClientStaffScheduler.sharedInstance.masterScheduleList.findAllStaffs(shift: currentShift)[indexPath.row].aclient == nil  {
             ModelClientStaffScheduler.sharedInstance.masterScheduleList.makeAMatch(aclient: currentClientInMatches, astaff: staffInRow!, shift: currentShift)
+        
+        navigationController?.popViewController(animated: true)
+
+        } else {
+            print("REDDDDDD")
+            let alert = UIAlertController(title: "This Staff is already booked", message: "Try again", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .destructive, handler: { (action) in
+                self.navigationController?.popViewController(animated: true)
+            }))
+            present(alert, animated: true)
+//       performSegue(withIdentifier: "backToClientShiftDetail", sender: nil)
         }
-        performSegue(withIdentifier: "backToClientShiftDetail", sender: nil)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let rowNumber = tableView.indexPathForSelectedRow!.row
-        print("THIS IS THE ROWNUMBER")
-        print(rowNumber)
-        let nextController = segue.destination as! ClientShiftDetailTableVController
-
-//                    print("I'm in the prepare for segue and I'm sending the findAllStaffs(currentshift,astaff,firstname)")
-//                    let i =  ModelClientStaffScheduler.sharedInstance.masterScheduleList.findAllStaffs(shift: currentShift)[tableView.indexPathForSelectedRow!.row].astaff?.staffFirstName
-//                    print(i)
-        
-//        nextController.currentStaffBooked = ModelClientStaffScheduler.sharedInstance.masterScheduleList.findAllStaffs(shift: currentShift)[tableView.indexPathForSelectedRow!.row].astaff
-        
-        
-                    print("I'm in the prepare for segue and I'm sending the currentclient")
-                    print(currentClientInMatches.clientFirstName)
-        
-        nextController.currentClient = currentClientInMatches
-        nextController.currentShift = currentShift
-    }
-  
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let rowNumber = tableView.indexPathForSelectedRow!.row
+//        print("THIS IS THE ROWNUMBER")
+//        print(rowNumber)
+//        let nextController = segue.destination as! ClientShiftDetailTableVController
+//
+//                            //                    print("I'm in the prepare for segue and I'm sending the findAllStaffs(currentshift,astaff,firstname)")
+//                            //                    let i =  ModelClientStaffScheduler.sharedInstance.masterScheduleList.findAllStaffs(shift: currentShift)[tableView.indexPathForSelectedRow!.row].astaff?.staffFirstName
+//                            //                    print(i)
+//        
+//                            //        nextController.currentStaffBooked = ModelClientStaffScheduler.sharedInstance.masterScheduleList.findAllStaffs(shift: currentShift)[tableView.indexPathForSelectedRow!.row].astaff
+//        
+//        
+//                    print("I'm in the prepare for segue and I'm sending the currentclient")
+//                    print(currentClientInMatches.clientFirstName)
+//        
+//        nextController.currentClient = currentClientInMatches
+//        nextController.currentShift = currentShift
+//    }
+//  
 
 
     

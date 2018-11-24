@@ -107,6 +107,16 @@ class ScheduleList {
         return false
     }
     
+//    func isAClientBookedWithThatStaff (aclient: Client, astaff: Staff, shift: String) -> Bool {
+//        let BookedWithSomeone : [Schedule] = findAllStaffs(shift: shift)
+//        for object in BookedWithSomeone {
+//            if object.aclient === aclient && object.astaff === astaff {
+//                return true
+//            }
+//        }
+//        return false
+//    }
+    
     
 // This function finds a staff for a client for a particular shift. Then it adds a staff to the object that has only a Client and the specified shift. (So now that object has no nil values) and then it removes the object that had only the Staff and the specified shift. (So now the staff no longer has availability during the specified shift)
     func makeAMatch(aclient: Client, astaff: Staff, shift: String) {

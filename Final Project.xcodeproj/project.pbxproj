@@ -17,6 +17,10 @@
 		550E4EC721A0E57A0054A19A /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550E4EC621A0E57A0054A19A /* Schedule.swift */; };
 		550E4EC921A0E58B0054A19A /* ScheduleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550E4EC821A0E58B0054A19A /* ScheduleList.swift */; };
 		551225532193876400CDE295 /* NewClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551225522193876400CDE295 /* NewClientViewController.swift */; };
+		551CBA6221A9E22900ABDDAD /*  ClientImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 551CBA6121A9E22800ABDDAD /*  ClientImage.png */; };
+		551CBA6421A9E2D100ABDDAD /* coconutDonut.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 551CBA6321A9E2D100ABDDAD /* coconutDonut.jpeg */; };
+		551CBA6621A9E43000ABDDAD /*  CaregiverImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 551CBA6521A9E42F00ABDDAD /*  CaregiverImage.png */; };
+		551CBA6821A9EFBD00ABDDAD /* Unknown-2 2 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 551CBA6721A9EFBD00ABDDAD /* Unknown-2 2 (1).png */; };
 		55B0BDAD2190F6A000FC53F4 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0BDAC2190F6A000FC53F4 /* Client.swift */; };
 		55B0BDAF2190F6F600FC53F4 /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0BDAE2190F6F600FC53F4 /* Staff.swift */; };
 		55B0BDB12190F78600FC53F4 /* ClientList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0BDB02190F78600FC53F4 /* ClientList.swift */; };
@@ -39,6 +43,10 @@
 		550E4EC621A0E57A0054A19A /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		550E4EC821A0E58B0054A19A /* ScheduleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleList.swift; sourceTree = "<group>"; };
 		551225522193876400CDE295 /* NewClientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClientViewController.swift; sourceTree = "<group>"; };
+		551CBA6121A9E22800ABDDAD /*  ClientImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = " ClientImage.png"; sourceTree = "<group>"; };
+		551CBA6321A9E2D100ABDDAD /* coconutDonut.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coconutDonut.jpeg; sourceTree = "<group>"; };
+		551CBA6521A9E42F00ABDDAD /*  CaregiverImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = " CaregiverImage.png"; sourceTree = "<group>"; };
+		551CBA6721A9EFBD00ABDDAD /* Unknown-2 2 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Unknown-2 2 (1).png"; sourceTree = "<group>"; };
 		55B0BDAC2190F6A000FC53F4 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		55B0BDAE2190F6F600FC53F4 /* Staff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
 		55B0BDB02190F78600FC53F4 /* ClientList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientList.swift; sourceTree = "<group>"; };
@@ -62,6 +70,10 @@
 		550403DE218FB4ED008AC0E7 = {
 			isa = PBXGroup;
 			children = (
+				551CBA6121A9E22800ABDDAD /*  ClientImage.png */,
+				551CBA6721A9EFBD00ABDDAD /* Unknown-2 2 (1).png */,
+				551CBA6521A9E42F00ABDDAD /*  CaregiverImage.png */,
+				551CBA6321A9E2D100ABDDAD /* coconutDonut.jpeg */,
 				550403E9218FB4ED008AC0E7 /* Final Project */,
 				550403E8218FB4ED008AC0E7 /* Products */,
 			);
@@ -159,8 +171,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				550403F5218FB4EF008AC0E7 /* LaunchScreen.storyboard in Resources */,
+				551CBA6421A9E2D100ABDDAD /* coconutDonut.jpeg in Resources */,
+				551CBA6821A9EFBD00ABDDAD /* Unknown-2 2 (1).png in Resources */,
 				550403F2218FB4EF008AC0E7 /* Assets.xcassets in Resources */,
 				550403F0218FB4ED008AC0E7 /* Main.storyboard in Resources */,
+				551CBA6621A9E43000ABDDAD /*  CaregiverImage.png in Resources */,
+				551CBA6221A9E22900ABDDAD /*  ClientImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -40,6 +40,22 @@ class NewClientViewController: UIViewController {
     }
     
     
+    @IBAction func DoneAddingclient(_ sender: UIBarButtonItem) {
+        if firstNameTextField.text != "" && lastNameTextField.text != "" {
+            let c = ModelClientStaffScheduler.sharedInstance.masterClientList.addClient(clientFirstName: firstNameTextField.text!, clientLastName: lastNameTextField.text!, hasCaregiver: ["SunA" : nil, "SunB" : nil,"SunC" : nil, "MonA" : nil, "MonB" : nil, "MonC" : nil, "TuesA" : nil, "TuesB" : nil, "TuesC" : nil, "WedA" : nil,  "WedB" : nil, "WedC" : nil, "ThursA" : nil, "ThursB" : nil, "ThursC" : nil, "FriA" : nil, "FriB" : nil, "FriC" : nil, "SatA" : nil, "SatB" : nil, "SatC" : nil])
+            ModelClientStaffScheduler.sharedInstance.masterScheduleList.addANewClientSchedule(aclient: c)
+            firstNameTextField.text = ""
+            lastNameTextField.text = ""
+            navigationController?.popViewController(animated: true)
+            
+        } else {
+            let alert = UIAlertController(title: "Enter all information", message: "Try Again", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .destructive, handler: nil))
+            present(alert, animated: true)
+            messageLabel.text = "Enter all information"
+        }
+        
+    }
     
 
 }

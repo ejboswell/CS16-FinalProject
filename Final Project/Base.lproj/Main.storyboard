@@ -238,9 +238,9 @@
                         <viewLayoutGuide key="safeArea" id="HEc-El-MJU"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add a Client VC" id="m1j-uX-I5K">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="TJc-H4-j7a">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="TJc-H4-j7a">
                             <connections>
-                                <action selector="addButtonTapped:" destination="mCK-1M-VnM" id="wBT-YR-ho3"/>
+                                <action selector="DoneAddingclient:" destination="mCK-1M-VnM" id="RbE-Hw-XLC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -471,14 +471,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuU-Vv-RVI">
-                                <rect key="frame" x="53" y="543" width="261" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvP-8c-xoG">
+                                <rect key="frame" x="115" y="556" width="168" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Add Staff and Shifts Selected"/>
+                                <state key="normal" title="Add a Staff"/>
                                 <connections>
-                                    <action selector="addStaffAndShiftsTapped:" destination="W7I-p2-J3z" eventType="touchUpInside" id="RQ9-Hy-VL5"/>
-                                    <segue destination="SY6-uT-SOM" kind="show" identifier="segueToStaffListTVController" id="o97-mN-boR"/>
+                                    <action selector="addStaffAndShiftsTapped:" destination="W7I-p2-J3z" eventType="touchUpInside" id="0Vv-h5-D4D"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -486,7 +484,7 @@
                         <viewLayoutGuide key="safeArea" id="o3G-YK-Jh4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add A StaffVC" id="beE-pP-Ju9">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aU8-DF-JwT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="aU8-DF-JwT">
                             <connections>
                                 <action selector="addButtonPressed:" destination="W7I-p2-J3z" id="hQm-ZM-pW8"/>
                             </connections>
@@ -506,13 +504,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DLM-U0-8oy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2618" y="-663"/>
+            <point key="canvasLocation" x="2616.8000000000002" y="-663.41829085457277"/>
         </scene>
         <!--Client-->
         <scene sceneID="2Jx-hH-Sho">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LdR-UJ-KUW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Client" id="LIG-u2-MeX"/>
+                    <tabBarItem key="tabBarItem" title="Client" image="ClientIcon" id="LIG-u2-MeX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2kV-NQ-TPp">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -531,7 +529,7 @@
         <scene sceneID="x2f-hO-swJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P1l-9b-ZNq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Staff" id="Hfc-Ke-odW"/>
+                    <tabBarItem key="tabBarItem" title="Staff" image="darkHand" id="Hfc-Ke-odW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MS2-6j-Fhf">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -566,8 +564,11 @@
             <point key="canvasLocation" x="-658.39999999999998" y="-1156.3718140929536"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ClientIcon" width="22.5" height="22.5"/>
+        <image name="darkHand" width="22.5" height="22.5"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4Ko-6T-jjJ"/>
-        <segue reference="10c-qf-EWJ"/>
+        <segue reference="S9N-Hf-9og"/>
     </inferredMetricsTieBreakers>
 </document>
