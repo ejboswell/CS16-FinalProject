@@ -30,7 +30,6 @@ class ClientListTableViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
         return 2
     }
     
@@ -39,40 +38,40 @@ class ClientListTableViewController: UITableViewController {
             return 1
         } else {
             return ModelClientStaffScheduler.sharedInstance.masterClientList.numberOfClients
-            
-          
-            
         }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cellStyle: String = "basicCell"
         if indexPath.section == 1 {
-            cellStyle = "rightDetailCell"
+            //cellStyle = "rightDetailCell"
+            cellStyle = "clientAddressCell"
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellStyle, for: indexPath)
-        cell.backgroundColor = UIColor.white
+//       let cell = tableView.dequeueReusableCell(withIdentifier: cellStyle, for: indexPath)
+//        cell.backgroundColor = UIColor.white
         if indexPath.section == 0 {
-            
+           let cell = tableView.dequeueReusableCell(withIdentifier: cellStyle, for: indexPath)
+            cell.backgroundColor = UIColor.white
             cell.textLabel?.text = "We have " +
                 "\(ModelClientStaffScheduler.sharedInstance.masterClientList.numberOfClients)" + " Clients"
+            return cell
         } else {
+           let cell = tableView.dequeueReusableCell(withIdentifier: cellStyle, for: indexPath) as! ClientAddressTableViewCell
             let client = ModelClientStaffScheduler.sharedInstance.masterClientList.getClient(number: indexPath.row)
-            cell.textLabel?.text = client.clientFirstName
-            cell.detailTextLabel?.text = client.clientLastName
+            cell.nameLabel.text = ("\(client.clientFirstName)" + " " + "\(client.clientLastName)")
+            return cell
+//            cell.setName(client: client)
+            
+//            cell.textLabel?.text = client.clientFirstName
+//            cell.detailTextLabel?.text = client.clientLastName
         }
-        return cell
+//        let cell = tableView.dequeueReusableCell(withIdentifier: cellStyle, for: indexPath)
+//        return cell
     }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-//        performSegue(withIdentifier: "toClientShiftDetail", sender: nil)
          performSegue(withIdentifier: "toClientShiftDetail", sender: self)
     }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let rowNumber = tableView.indexPathForSelectedRow!.row
-//        let nextController = segue.destination as! ClientShiftDetailTableVController
-//        nextController.currentClient = ModelClientStaffScheduler.sharedInstance.masterClientList.getClient(number: rowNumber)
-//    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toClientShiftDetail" {
@@ -80,7 +79,5 @@ class ClientListTableViewController: UITableViewController {
         let nextController = segue.destination as! ClientShiftDetailTableVController
         nextController.currentClient = ModelClientStaffScheduler.sharedInstance.masterClientList.getClient(number: rowNumber)
         }
-        }
-
-
+    }
 }

@@ -28,6 +28,7 @@
 		55B0BDB52191001C00FC53F4 /* ClientListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0BDB42191001C00FC53F4 /* ClientListTableViewController.swift */; };
 		55B0BDB72191104900FC53F4 /* ModelClientStaffScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0BDB62191104900FC53F4 /* ModelClientStaffScheduler.swift */; };
 		55B0BDB921911F1D00FC53F4 /* StaffListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0BDB821911F1D00FC53F4 /* StaffListTableViewController.swift */; };
+		55E7FFEA21AF5DC1001202D6 /* ClientAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E7FFE921AF5DC1001202D6 /* ClientAddressTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		55B0BDB42191001C00FC53F4 /* ClientListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListTableViewController.swift; sourceTree = "<group>"; };
 		55B0BDB62191104900FC53F4 /* ModelClientStaffScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClientStaffScheduler.swift; sourceTree = "<group>"; };
 		55B0BDB821911F1D00FC53F4 /* StaffListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffListTableViewController.swift; sourceTree = "<group>"; };
+		55E7FFE921AF5DC1001202D6 /* ClientAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientAddressTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				550403EA218FB4ED008AC0E7 /* AppDelegate.swift */,
-				550403EE218FB4ED008AC0E7 /* Main.storyboard */,
 				550E4EC2219E10480054A19A /* ClientShiftDetailTableVController.swift */,
 				551225522193876400CDE295 /* NewClientViewController.swift */,
 				55B0BDB42191001C00FC53F4 /* ClientListTableViewController.swift */,
@@ -104,8 +105,10 @@
 				55B0BDB02190F78600FC53F4 /* ClientList.swift */,
 				55B0BDB62191104900FC53F4 /* ModelClientStaffScheduler.swift */,
 				55B0BDB22190F81C00FC53F4 /* StaffList.swift */,
+				550403EE218FB4ED008AC0E7 /* Main.storyboard */,
 				55B0BDAE2190F6F600FC53F4 /* Staff.swift */,
 				550403F1218FB4EF008AC0E7 /* Assets.xcassets */,
+				55E7FFE921AF5DC1001202D6 /* ClientAddressTableViewCell.swift */,
 				550403F3218FB4EF008AC0E7 /* LaunchScreen.storyboard */,
 				550403F6218FB4EF008AC0E7 /* Info.plist */,
 			);
@@ -197,6 +200,7 @@
 				550E4EC3219E10480054A19A /* ClientShiftDetailTableVController.swift in Sources */,
 				550E4EC921A0E58B0054A19A /* ScheduleList.swift in Sources */,
 				55B0BDAF2190F6F600FC53F4 /* Staff.swift in Sources */,
+				55E7FFEA21AF5DC1001202D6 /* ClientAddressTableViewCell.swift in Sources */,
 				55B0BDB72191104900FC53F4 /* ModelClientStaffScheduler.swift in Sources */,
 				55B0BDAD2190F6A000FC53F4 /* Client.swift in Sources */,
 				550E4EC721A0E57A0054A19A /* Schedule.swift in Sources */,

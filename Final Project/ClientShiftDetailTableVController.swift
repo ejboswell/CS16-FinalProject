@@ -24,19 +24,8 @@ class ClientShiftDetailTableVController: UITableViewController {
         super.viewDidLoad()
         tableView.reloadData()
        self.navigationItem.title = ("\(currentClient.clientFirstName)" + " Shifts")
-//        tableView.reloadData()
-//        findStaff(shift: "SunA")
-        
-//        let first1 = currentStudent.fName.substring(to:currentStudent.fName.index(currentStudent.fName.startIndex, offsetBy: 1))
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
-    // MARK: - Table view data source
     
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
@@ -74,22 +63,6 @@ class ClientShiftDetailTableVController: UITableViewController {
         return cell
     }
     
-//
-//    func findStaff(shift:String) {
-//        var currentPossibleStaff: [Staff] = []
-//        for object in ModelClientStaffScheduler.sharedInstance.masterStaffList.staffs {
-//            print("This is going to be a object " + "\(object)")
-//            if object.staffShiftsAvailable.contains(shift) {
-//                currentPossibleStaff.append(object)
-//
-//            }
-//            for item in currentPossibleStaff {
-//                print("HERE ARE THE MATCHES")
-//                print(item)
-//            }
-//
-//        }
-//    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "toClientStaffMatches", sender: nil)
