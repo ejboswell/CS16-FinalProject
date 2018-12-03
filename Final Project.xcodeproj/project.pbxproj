@@ -18,7 +18,6 @@
 		550E4EC921A0E58B0054A19A /* ScheduleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550E4EC821A0E58B0054A19A /* ScheduleList.swift */; };
 		551225532193876400CDE295 /* NewClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551225522193876400CDE295 /* NewClientViewController.swift */; };
 		551CBA6221A9E22900ABDDAD /*  ClientImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 551CBA6121A9E22800ABDDAD /*  ClientImage.png */; };
-		551CBA6421A9E2D100ABDDAD /* coconutDonut.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 551CBA6321A9E2D100ABDDAD /* coconutDonut.jpeg */; };
 		551CBA6621A9E43000ABDDAD /*  CaregiverImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 551CBA6521A9E42F00ABDDAD /*  CaregiverImage.png */; };
 		551CBA6821A9EFBD00ABDDAD /* Unknown-2 2 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 551CBA6721A9EFBD00ABDDAD /* Unknown-2 2 (1).png */; };
 		55B0BDAD2190F6A000FC53F4 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0BDAC2190F6A000FC53F4 /* Client.swift */; };
@@ -28,6 +27,7 @@
 		55B0BDB52191001C00FC53F4 /* ClientListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0BDB42191001C00FC53F4 /* ClientListTableViewController.swift */; };
 		55B0BDB72191104900FC53F4 /* ModelClientStaffScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0BDB62191104900FC53F4 /* ModelClientStaffScheduler.swift */; };
 		55B0BDB921911F1D00FC53F4 /* StaffListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0BDB821911F1D00FC53F4 /* StaffListTableViewController.swift */; };
+		55E7000121B37429001202D6 /* ClientAddressMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E7000021B37429001202D6 /* ClientAddressMapViewController.swift */; };
 		55E7FFEA21AF5DC1001202D6 /* ClientAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E7FFE921AF5DC1001202D6 /* ClientAddressTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +45,6 @@
 		550E4EC821A0E58B0054A19A /* ScheduleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleList.swift; sourceTree = "<group>"; };
 		551225522193876400CDE295 /* NewClientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClientViewController.swift; sourceTree = "<group>"; };
 		551CBA6121A9E22800ABDDAD /*  ClientImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = " ClientImage.png"; sourceTree = "<group>"; };
-		551CBA6321A9E2D100ABDDAD /* coconutDonut.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coconutDonut.jpeg; sourceTree = "<group>"; };
 		551CBA6521A9E42F00ABDDAD /*  CaregiverImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = " CaregiverImage.png"; sourceTree = "<group>"; };
 		551CBA6721A9EFBD00ABDDAD /* Unknown-2 2 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Unknown-2 2 (1).png"; sourceTree = "<group>"; };
 		55B0BDAC2190F6A000FC53F4 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
@@ -55,6 +54,7 @@
 		55B0BDB42191001C00FC53F4 /* ClientListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListTableViewController.swift; sourceTree = "<group>"; };
 		55B0BDB62191104900FC53F4 /* ModelClientStaffScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClientStaffScheduler.swift; sourceTree = "<group>"; };
 		55B0BDB821911F1D00FC53F4 /* StaffListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffListTableViewController.swift; sourceTree = "<group>"; };
+		55E7000021B37429001202D6 /* ClientAddressMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientAddressMapViewController.swift; sourceTree = "<group>"; };
 		55E7FFE921AF5DC1001202D6 /* ClientAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientAddressTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +75,6 @@
 				551CBA6121A9E22800ABDDAD /*  ClientImage.png */,
 				551CBA6721A9EFBD00ABDDAD /* Unknown-2 2 (1).png */,
 				551CBA6521A9E42F00ABDDAD /*  CaregiverImage.png */,
-				551CBA6321A9E2D100ABDDAD /* coconutDonut.jpeg */,
 				550403E9218FB4ED008AC0E7 /* Final Project */,
 				550403E8218FB4ED008AC0E7 /* Products */,
 			);
@@ -93,22 +92,23 @@
 			isa = PBXGroup;
 			children = (
 				550403EA218FB4ED008AC0E7 /* AppDelegate.swift */,
+				550E4EC4219F608F0054A19A /* ClientStaffMatchesTableVController.swift */,
 				550E4EC2219E10480054A19A /* ClientShiftDetailTableVController.swift */,
+				55E7000021B37429001202D6 /* ClientAddressMapViewController.swift */,
 				551225522193876400CDE295 /* NewClientViewController.swift */,
 				55B0BDB42191001C00FC53F4 /* ClientListTableViewController.swift */,
-				550E4EC4219F608F0054A19A /* ClientStaffMatchesTableVController.swift */,
-				550E4EC621A0E57A0054A19A /* Schedule.swift */,
-				550E4EC821A0E58B0054A19A /* ScheduleList.swift */,
 				550403EC218FB4ED008AC0E7 /* StaffScheduleViewController.swift */,
 				55B0BDB821911F1D00FC53F4 /* StaffListTableViewController.swift */,
-				55B0BDAC2190F6A000FC53F4 /* Client.swift */,
-				55B0BDB02190F78600FC53F4 /* ClientList.swift */,
-				55B0BDB62191104900FC53F4 /* ModelClientStaffScheduler.swift */,
-				55B0BDB22190F81C00FC53F4 /* StaffList.swift */,
 				550403EE218FB4ED008AC0E7 /* Main.storyboard */,
+				55B0BDB62191104900FC53F4 /* ModelClientStaffScheduler.swift */,
+				55E7FFE921AF5DC1001202D6 /* ClientAddressTableViewCell.swift */,
+				550E4EC821A0E58B0054A19A /* ScheduleList.swift */,
+				550E4EC621A0E57A0054A19A /* Schedule.swift */,
+				55B0BDB02190F78600FC53F4 /* ClientList.swift */,
+				55B0BDAC2190F6A000FC53F4 /* Client.swift */,
+				55B0BDB22190F81C00FC53F4 /* StaffList.swift */,
 				55B0BDAE2190F6F600FC53F4 /* Staff.swift */,
 				550403F1218FB4EF008AC0E7 /* Assets.xcassets */,
-				55E7FFE921AF5DC1001202D6 /* ClientAddressTableViewCell.swift */,
 				550403F3218FB4EF008AC0E7 /* LaunchScreen.storyboard */,
 				550403F6218FB4EF008AC0E7 /* Info.plist */,
 			);
@@ -174,7 +174,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				550403F5218FB4EF008AC0E7 /* LaunchScreen.storyboard in Resources */,
-				551CBA6421A9E2D100ABDDAD /* coconutDonut.jpeg in Resources */,
 				551CBA6821A9EFBD00ABDDAD /* Unknown-2 2 (1).png in Resources */,
 				550403F2218FB4EF008AC0E7 /* Assets.xcassets in Resources */,
 				550403F0218FB4ED008AC0E7 /* Main.storyboard in Resources */,
@@ -191,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				550403ED218FB4ED008AC0E7 /* StaffScheduleViewController.swift in Sources */,
+				55E7000121B37429001202D6 /* ClientAddressMapViewController.swift in Sources */,
 				550E4EC5219F608F0054A19A /* ClientStaffMatchesTableVController.swift in Sources */,
 				55B0BDB921911F1D00FC53F4 /* StaffListTableViewController.swift in Sources */,
 				55B0BDB52191001C00FC53F4 /* ClientListTableViewController.swift in Sources */,

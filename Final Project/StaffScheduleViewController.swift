@@ -53,29 +53,24 @@ class StaffScheduleViewController: UIViewController {
 
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        
         makeDayShiftAvailability()
         
         if fNameTextField.text != "" && lNameTextField.text != "" && dayShiftAvailability != [] {
-            
-//            makeDayShiftAvailability()
-//        } else if dayShiftAvailability != [] {
             print(dayShiftAvailability)
             let s = ModelClientStaffScheduler.sharedInstance.masterStaffList.addStaff(staffFirstName: fNameTextField.text!, staffLastName: lNameTextField.text!, staffShiftsAvailable: dayShiftAvailability, staffShiftsBooked: [:])
             
             ModelClientStaffScheduler.sharedInstance.masterScheduleList.addANewStaffSchedule(astaff: s, shifts: dayShiftAvailability)
-//            performSegue(withIdentifier: "segueToStaffListTVController", sender: nil)
             navigationController?.popViewController(animated: true)
         } else {
-            
-          let alert = UIAlertController(title: "Enter first and last name.", message: "And at least one shift.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Enter first and last name.", message: "And at least one shift.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .destructive, handler: { (action) in
                 self.fNameTextField.text = ""
                 self.lNameTextField.text = ""
                 self.dayShiftAvailability = []
             }))
-        present(alert, animated: true)
-        
-    }
+            present(alert, animated: true)
+        }
     
     }
     
@@ -156,6 +151,5 @@ class StaffScheduleViewController: UIViewController {
                 dayShiftAvailability.append("SatC")
             }
         }
-
 }
 

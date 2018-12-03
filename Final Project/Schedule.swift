@@ -19,6 +19,4 @@ class Schedule {
         self.astaff = astaff
         self.ashift = ashift
     }
-    
-    
 }

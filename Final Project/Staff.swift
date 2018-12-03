@@ -20,19 +20,5 @@ class Staff {
         self.staffShiftsAvailable = staffShiftsAvailable
         self.staffShiftsBooked = staffShiftsBooked
     }
-    
-    
 }
-//struct Staff {
-//    var staffFirstName:  String = ""
-//    var staffLastName:  String = ""
-//    var staffShiftsAvailable: [String] = []
-////    var staffShiftsAvailable: [String:String] = [:]
-//    var staffShiftsBooked: [String:Client] = [:]
-//
-//
 
-//
-//}
-//var staffFirstName:  String = ["Hailey", "Lindsey", "Lauren", "Carli", "Kasha", "Harmony"]
-//var staffLastName:  String = ["Knolls", "Rice", "Kachel", "Sanchez", "Smith", "Purdue"]

@@ -16,6 +16,4 @@ class ClientAddressTableViewCell: UITableViewCell {
     
     @IBOutlet weak var addressLabel: UILabel!
     
-    
-    
 }

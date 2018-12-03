@@ -17,8 +17,8 @@ class ClientList {
     
    
     // When called func addClient instantiates (makes) a new instance of Client
-    func addClient(clientFirstName: String, clientLastName: String, hasCaregiver: [String:Staff?]) -> Client  {
-        let c = Client(clientFirstName: clientFirstName, clientLastName: clientLastName, hasCaregiver: [:])
+    func addClient(clientFirstName: String, clientLastName: String, clientStreet: String, clientCity: String, clientState: String, clientZip: Int, hasCaregiver: [String:Staff?]) -> Client  {
+        let c = Client(clientFirstName: clientFirstName, clientLastName: clientLastName, clientStreet: clientStreet, clientCity: clientCity,clientState: clientState, clientZip: clientZip, hasCaregiver: [:])
 //            hasCaregiver)
         clients.append(c)
 //        print(clients)
@@ -35,6 +35,5 @@ class ClientList {
     var numberOfClients: Int {
         return clients.count
     }
-    
 }
  

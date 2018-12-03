@@ -29,7 +29,4 @@ class StaffList {
     var numberOfStaffs: Int {
         return staffs.count
     }
-    
-    
-    
 }

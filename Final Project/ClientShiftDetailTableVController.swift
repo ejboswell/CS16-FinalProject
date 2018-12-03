@@ -24,7 +24,6 @@ class ClientShiftDetailTableVController: UITableViewController {
         super.viewDidLoad()
         tableView.reloadData()
        self.navigationItem.title = ("\(currentClient.clientFirstName)" + " Shifts")
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -50,7 +49,7 @@ class ClientShiftDetailTableVController: UITableViewController {
         let c = ModelClientStaffScheduler.sharedInstance.masterScheduleList.clientStaffDetailInfo(theClient: currentClient)
         cell.backgroundColor = UIColor.white
         cell.textLabel?.text = c.schedules[indexPath.row].ashift
-        print(currentShift)
+        print(" Hellllllooooo  \(currentShift)")
 // If Staff object in the array is not empty put in the staff name and make background color yellow
         if c.schedules[indexPath.row].astaff != nil {
             cell.detailTextLabel?.text = c.schedules[indexPath.row].astaff?.staffFirstName
@@ -71,8 +70,8 @@ class ClientShiftDetailTableVController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let rowNumber = tableView.indexPathForSelectedRow!.row
         let nextController = segue.destination as! ClientStaffMatchesTableVController
+        // Send the next Controller the currentClient and the current shift
         nextController.currentClientInMatches = currentClient
-        
         nextController.currentShift = shifts[rowNumber]
     }
     
