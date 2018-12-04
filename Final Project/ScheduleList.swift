@@ -13,7 +13,6 @@ class ScheduleList {
     
     var schedules: [Schedule] = []
     
-    
     // This function adds a new client. It will make 21 Schedule objects each with the Client, the Staff will be nil (as the shift is still open) and each of the 21 objects will have a different shift.
     func addANewClientSchedule(aclient:Client)  {
         let shifts = ["SunA", "SunB","SunC", "MonA", "MonB", "MonC", "TuesA", "TuesB", "TuesC", "WedA",  "WedB", "WedC", "ThursA", "ThursB", "ThursC", "FriA", "FriB", "FriC", "SatA", "SatB", "SatC"]
@@ -37,7 +36,6 @@ class ScheduleList {
     func findAllStaffs(shift:String) -> [Schedule]  {
         var foundShifts: [Schedule] = []
         for bigobject in schedules {
-
             if bigobject.ashift == shift && (bigobject.astaff != nil) {
                 foundShifts.append(bigobject)
             }
@@ -45,7 +43,6 @@ class ScheduleList {
       return foundShifts
     }
     
-
     // This function sends true if the Client is already booked for the particular shift
     func isClientBooked(aclient:Client, astaff:Staff, shift:String) -> Bool {
         let thisShiftSchedule: [Schedule] = findAllStaffs(shift: shift)
@@ -57,9 +54,9 @@ class ScheduleList {
         return false
     }
     
-// This function finds a staff for a client for a particular shift. Then it adds a staff to the object that has only a Client and the specified shift. (So now that object has no nil values) and then it removes the object that had only the Staff and the specified shift. (So now the staff no longer has availability during the specified shift)
+    // This function finds a staff for a client for a particular shift. Then it adds a staff to the object that has only a Client and the specified shift. (So now that object has no nil values) and then it removes the object that had only the Staff and the specified shift. (So now the staff no longer has availability during the specified shift)
     func makeAMatch(aclient: Client, astaff: Staff, shift: String) {
-//        if isClientBooked(aclient: aclient, astaff: astaff, shift: shift) == false {
+        // If isClientBooked(aclient: aclient, astaff: astaff, shift: shift) == false {
         for bigobject in schedules {
             if bigobject.aclient?.clientFirstName == aclient.clientFirstName
                 && bigobject.aclient?.clientLastName == aclient.clientLastName
@@ -72,7 +69,7 @@ class ScheduleList {
                 && bigobject.astaff?.staffLastName == astaff.staffLastName
                 && bigobject.ashift == shift
                 && bigobject.aclient == nil {
-//  Now that we have added at Staff to a nil Staff with a Client remove the extra object that just had Staff and shift.
+                //  Now that we have added at Staff to a nil Staff property in a Schedule object that had a Client object remove the extra Schedule object that just had a Staff object and a shift.
                 if let index = schedules.index(where: { $0 === bigobject}) {
                     
                     schedules.remove(at: index)

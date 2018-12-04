@@ -124,6 +124,10 @@ class ClientListTableViewController: UITableViewController, UIGestureRecognizerD
     @objc
     func addressClicked2(tapGesture:UITapGestureRecognizer){
         print("Address Label tag is:\(tapGesture.view!.tag)")
+        let c = ModelClientStaffScheduler.sharedInstance.masterClientList.getClient(number: tapGesture.view!.tag)
+        print(c.clientStreet)
+        let indexPathForSender = IndexPath(row: tapGesture.view!.tag, section: 1)
+        performSegue(withIdentifier: "toClientAddressMap", sender: indexPathForSender)
     }
     
     fileprivate func setUpAddressRecognizer(_ cell: ClientAddressTableViewCell, _ indexPath: IndexPath) {
