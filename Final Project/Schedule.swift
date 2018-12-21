@@ -9,7 +9,7 @@
 import Foundation
 
 class Schedule {
-    
+    // Schedule properties
     var aclient: Client?
     var astaff: Staff?
     var ashift: String

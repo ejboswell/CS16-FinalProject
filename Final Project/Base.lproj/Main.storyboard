@@ -546,14 +546,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvP-8c-xoG">
-                                <rect key="frame" x="115" y="556" width="168" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add a Staff"/>
-                                <connections>
-                                    <action selector="addStaffAndShiftsTapped:" destination="W7I-p2-J3z" eventType="touchUpInside" id="0Vv-h5-D4D"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="o3G-YK-Jh4"/>
@@ -579,7 +571,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DLM-U0-8oy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2482" y="-115"/>
+            <point key="canvasLocation" x="2480.8000000000002" y="-115.59220389805098"/>
         </scene>
         <!--Client-->
         <scene sceneID="2Jx-hH-Sho">

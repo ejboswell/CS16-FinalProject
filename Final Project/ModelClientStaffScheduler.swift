@@ -16,6 +16,7 @@ class ModelClientStaffScheduler {
     var masterStaffList = StaffList()
     var masterScheduleList = ScheduleList()
 
+    // Setting up the first two clients for presentation purposes
     init() {
         let c = masterClientList.addClient(clientFirstName: "Michelle", clientLastName: "Smith", clientStreet: "1605 Lexington Lane", clientCity: "Pleasanton", clientState: "CA", clientZip: 94588, hasCaregiver:["SunA" : nil, "SunB" : nil,"SunC" : nil, "MonA" : nil, "MonB" : nil, "MonC" : nil, "TuesA" : nil, "TuesB" : nil, "TuesC" : nil, "WedA" : nil,  "WedB" : nil, "WedC" : nil, "ThursA" : nil, "ThursB" : nil, "ThursC" : nil, "FriA" : nil, "FriB" : nil, "FriC" : nil, "SatA" : nil, "SatB" : nil, "SatC" : nil])
         
@@ -24,7 +25,7 @@ class ModelClientStaffScheduler {
         let c2 = masterClientList.addClient(clientFirstName: "Ellie", clientLastName: "Black",clientStreet: "4863 Willow Road", clientCity: "Pleasanton", clientState: "CA", clientZip: 94588, hasCaregiver: ["SunA" : nil, "SunB" : nil, "SunC" : nil ,"MonA" : nil, "MonB" : nil, "MonC" : nil, "TuesA" : nil, "TuesB" : nil, "TuesC" : nil, "WedA" : nil,  "WedB" : nil, "WedC" : nil, "ThursA" : nil, "ThursB" : nil, "ThursC" : nil, "FriA" : nil, "FriB" : nil, "FriC" : nil, "SatA" : nil, "SatB" : nil, "SatC" : nil])
         
         masterScheduleList.addANewClientSchedule(aclient: c2)
-        
+        // Setting up 7 initial Staff Objects for presentation purposes
         let s1 = masterStaffList.addStaff(staffFirstName: "Hailey", staffLastName: "Ross", staffShiftsAvailable: ["MonC", "TuesC", "WedB", "ThursB", "FriC"], staffShiftsBooked: [:])
         let s2 = masterStaffList.addStaff(staffFirstName: "Alivia", staffLastName: "Cohen", staffShiftsAvailable: ["WedA", "ThursA", "FriA", "FriB", "SatA"], staffShiftsBooked: [:])
         let s3 = masterStaffList.addStaff(staffFirstName: "Rubie", staffLastName: "Haste", staffShiftsAvailable: ["SunA", "SunB", "MonA", "MonB", "TuesA", "TuesB"], staffShiftsBooked: [:])
@@ -32,7 +33,7 @@ class ModelClientStaffScheduler {
         let s5 = masterStaffList.addStaff(staffFirstName: "Rose", staffLastName: "Panna", staffShiftsAvailable: ["MonC", "TuesC", "WedB", "ThursB", "FriC"], staffShiftsBooked: [:])
         let s6 = masterStaffList.addStaff(staffFirstName: "Jayne", staffLastName: "Larson", staffShiftsAvailable: ["WedA", "ThursA", "FriA", "FriB", "SatA"], staffShiftsBooked: [:])
         let s7 = masterStaffList.addStaff(staffFirstName: "Krista", staffLastName: "Icban", staffShiftsAvailable: ["SunA", "SunB", "MonA", "MonB", "TuesA", "TuesB"], staffShiftsBooked: [:])
-        
+       // Setting up 7 initial Schedule objects for the 7 initial staff members
         let s1s = s1.staffShiftsAvailable
         masterScheduleList.addANewStaffSchedule(astaff: s1, shifts: s1s)
         let s2s = s2.staffShiftsAvailable

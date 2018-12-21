@@ -9,6 +9,7 @@
 import Foundation
 
 class Staff {
+    // Staff properties
     var staffFirstName:  String = ""
     var staffLastName:  String = ""
     var staffShiftsAvailable: [String] = []

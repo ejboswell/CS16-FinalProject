@@ -8,6 +8,8 @@
 
 import UIKit
 
+// An object for a custom Cell for the ClientShiftDetailTableVController
+
 class ClientAddressTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!

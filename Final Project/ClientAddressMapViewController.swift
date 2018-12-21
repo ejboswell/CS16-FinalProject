@@ -31,6 +31,11 @@ class ClientAddressMapViewController: UIViewController, MKMapViewDelegate {
 //    }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        UIView.animate(withDuration: 1.5, delay: 0.0, options: [UIView.AnimationOptions.autoreverse, UIView.AnimationOptions.repeat], animations: {
+            self.clientAddressTextView.backgroundColor = UIColor.green
+        }, completion: nil)
+    
         self.navigationItem.title = ("\(currentClient.clientFirstName)" + "'s Address")
         // Display the current client's address.
         clientAddressTextView.text = currentAddress

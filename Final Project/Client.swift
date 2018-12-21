@@ -8,13 +8,9 @@
 
 import Foundation
 
-//struct Client {
-//    var clientFirstName: String = ""
-//    var clientLastName:  String = ""
-//    var hasCaregiver: [String:Staff?] = [:]
-//}
 
 class Client {
+    // Client properties
     var clientFirstName: String = ""
     var clientLastName:  String = ""
     var clientStreet: String = ""

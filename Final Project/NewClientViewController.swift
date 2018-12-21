@@ -36,18 +36,18 @@ class NewClientViewController: UIViewController {
 }
    
     
-    @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
-        if firstNameTextField.text != "" && lastNameTextField.text != "" {
-            let c = ModelClientStaffScheduler.sharedInstance.masterClientList.addClient(clientFirstName: firstNameTextField.text!, clientLastName: lastNameTextField.text!, clientStreet: clientStreetTextField.text!, clientCity: clientCityTextField.text!, clientState: clientStateTextField.text!, clientZip: Int(clientZipTextField.text!)!, hasCaregiver: ["SunA" : nil, "SunB" : nil,"SunC" : nil, "MonA" : nil, "MonB" : nil, "MonC" : nil, "TuesA" : nil, "TuesB" : nil, "TuesC" : nil, "WedA" : nil,  "WedB" : nil, "WedC" : nil, "ThursA" : nil, "ThursB" : nil, "ThursC" : nil, "FriA" : nil, "FriB" : nil, "FriC" : nil, "SatA" : nil, "SatB" : nil, "SatC" : nil])
-            ModelClientStaffScheduler.sharedInstance.masterScheduleList.addANewClientSchedule(aclient: c)
-            firstNameTextField.text = ""
-            lastNameTextField.text = ""
-            
-        } else {
-            messageLabel.text = "Enter all information"
-        }
-    }
-    
+//    @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
+//        if firstNameTextField.text != "" && lastNameTextField.text != "" {
+//            let c = ModelClientStaffScheduler.sharedInstance.masterClientList.addClient(clientFirstName: firstNameTextField.text!, clientLastName: lastNameTextField.text!, clientStreet: clientStreetTextField.text!, clientCity: clientCityTextField.text!, clientState: clientStateTextField.text!, clientZip: Int(clientZipTextField.text!)!, hasCaregiver: ["SunA" : nil, "SunB" : nil,"SunC" : nil, "MonA" : nil, "MonB" : nil, "MonC" : nil, "TuesA" : nil, "TuesB" : nil, "TuesC" : nil, "WedA" : nil,  "WedB" : nil, "WedC" : nil, "ThursA" : nil, "ThursB" : nil, "ThursC" : nil, "FriA" : nil, "FriB" : nil, "FriC" : nil, "SatA" : nil, "SatB" : nil, "SatC" : nil])
+//            ModelClientStaffScheduler.sharedInstance.masterScheduleList.addANewClientSchedule(aclient: c)
+//            firstNameTextField.text = ""
+//            lastNameTextField.text = ""
+//            
+//        } else {
+//            messageLabel.text = "Enter all information"
+//        }
+//    }
+//    
     
     @IBAction func DoneAddingclient(_ sender: UIBarButtonItem) {
         if firstNameTextField.text != "" && lastNameTextField.text != "" && clientStreetTextField.text != "" && clientCityTextField.text != "" && clientStateTextField.text != "" && clientZipTextField.text != "" {

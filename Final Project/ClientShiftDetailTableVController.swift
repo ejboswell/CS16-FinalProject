@@ -30,13 +30,13 @@ class ClientShiftDetailTableVController: UITableViewController {
         tableView.reloadData()
     }
 
+    // Set up number of Sections in the TableView
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
+    // Set up number of rows which will be 21 for the 21 shifts per week.
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 21
     }
 
@@ -49,7 +49,7 @@ class ClientShiftDetailTableVController: UITableViewController {
         let c = ModelClientStaffScheduler.sharedInstance.masterScheduleList.clientStaffDetailInfo(theClient: currentClient)
         cell.backgroundColor = UIColor.white
         cell.textLabel?.text = c.schedules[indexPath.row].ashift
-        print(" Hellllllooooo  \(currentShift)")
+        //print(" Hellllllooooo  \(currentShift)")
 // If Staff object in the array is not empty put in the staff name and make background color yellow
         if c.schedules[indexPath.row].astaff != nil {
             cell.detailTextLabel?.text = c.schedules[indexPath.row].astaff?.staffFirstName
@@ -62,11 +62,12 @@ class ClientShiftDetailTableVController: UITableViewController {
         return cell
     }
     
-    
+    // If user selects the row go to ClientStaffMatches View
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "toClientStaffMatches", sender: nil)
     }
     
+    // Make sure the next ViewController has the current information (the current Client (the one we are presently working on)  and current shift)
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let rowNumber = tableView.indexPathForSelectedRow!.row
         let nextController = segue.destination as! ClientStaffMatchesTableVController
@@ -74,50 +75,4 @@ class ClientShiftDetailTableVController: UITableViewController {
         nextController.currentClientInMatches = currentClient
         nextController.currentShift = shifts[rowNumber]
     }
-    
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
